@@ -1,6 +1,6 @@
 ---
 title: "Milestone1-example"
-author: "Matthew Connell"
+author: "Matthew Connell, Firas Moosvi"
 date: "23/02/2020"
 always_allow_html: true
 output: 

@@ -1,4 +1,4 @@
-# Demo Project
+# Demo Project - Autism Spectrum Disorder Screening
 
 This is a demo project for STAT 547 so you know the level of detail we are expecting. 
 

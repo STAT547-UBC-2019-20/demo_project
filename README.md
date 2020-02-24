@@ -2,7 +2,7 @@
 
 This is a demo project for STAT 547 so you know the level of detail we are expecting. 
 
-The HTML version of the report can be found [here](https://github.com/STAT547-UBC-2019-20/demo_project/blob/master/docs/milestone1-547-example.html)
+The HTML version of the report can be found [here](https://stat547-ubc-2019-20.github.io/demo_project/blob/master/docs/milestone1-547-example.html)
 
 This will continue to update throughout the course and important changes will be marked by a release.
 

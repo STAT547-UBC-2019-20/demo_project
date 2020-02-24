@@ -48,52 +48,52 @@ Below is the entire variable set:
   <tr>
    <td style="text-align:left;"> A1_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I often notice small sounds when others do not </td>
+   <td style="text-align:left;"> Prompt: I often notice small sounds when others do not </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A2_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I usually concentrate more on the whole picture, rather than the small details </td>
+   <td style="text-align:left;"> Prompt: I usually concentrate more on the whole picture, rather than the small details </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A3_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I find it easy to do more than one thing at once </td>
+   <td style="text-align:left;"> Prompt: I find it easy to do more than one thing at once </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A4_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): If there is an interruption, I can switch back to what I was doing very quickly </td>
+   <td style="text-align:left;"> Prompt: If there is an interruption, I can switch back to what I was doing very quickly </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A5_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I find it easy to 'read between the lines' when someone is talking to me </td>
+   <td style="text-align:left;"> Prompt: I find it easy to 'read between the lines' when someone is talking to me </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A6_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I know how to tell if someone listening to me is getting bored </td>
+   <td style="text-align:left;"> Prompt: I know how to tell if someone listening to me is getting bored </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A7_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): When I'm reading a story I find it difficult to work out the characters' intentions </td>
+   <td style="text-align:left;"> Prompt: When I'm reading a story I find it difficult to work out the characters' intentions </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A8_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I like to collect information about categories of things(e.g. types of car, types of bird, types of train, types of plant etc) </td>
+   <td style="text-align:left;"> Prompt: I like to collect information about categories of things(e.g. types of car, types of bird, types of train, types of plant etc) </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A9_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I find it easy to work out what someone is thinking or feeling just by looking at their face </td>
+   <td style="text-align:left;"> Prompt: I find it easy to work out what someone is thinking or feeling just by looking at their face </td>
   </tr>
   <tr>
    <td style="text-align:left;"> A10_score </td>
    <td style="text-align:left;"> Int (0,1) </td>
-   <td style="text-align:left;"> Prompt (yes/no): I find it difficult to work out people's intentions </td>
+   <td style="text-align:left;"> Prompt: I find it difficult to work out people's intentions </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Age </td>

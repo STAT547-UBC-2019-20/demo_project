@@ -48,16 +48,16 @@ library(kableExtra)
 object <- {
   "| Variable          | Type             | Description                                                                                                                            |
 |----------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| A1_score             | Int (0,1)        | Prompt (yes/no): I often notice small sounds when others do not                                                                                 |
-| A2_score             | Int (0,1)        | Prompt (yes/no): I usually concentrate more on the whole picture, rather than the small details                                                 |
-| A3_score             | Int (0,1)        | Prompt (yes/no): I find it easy to do more than one thing at once                                                                               |
-| A4_score             | Int (0,1)        | Prompt (yes/no): If there is an interruption, I can switch back to what I was doing very quickly                                                |
-| A5_score             | Int (0,1)        | Prompt (yes/no): I find it easy to 'read between the lines' when someone is talking to me                                                       |
-| A6_score             | Int (0,1)        | Prompt (yes/no): I know how to tell if someone listening to me is getting bored                                                                 |
-| A7_score             | Int (0,1)        | Prompt (yes/no): When I'm reading a story I find it difficult to work out the characters' intentions                                            |
-| A8_score             | Int (0,1)        | Prompt (yes/no): I like to collect information about categories of things(e.g. types of car, types of bird, types of train, types of plant etc) |
-| A9_score             | Int (0,1)        | Prompt (yes/no): I find it easy to work out what someone is thinking or feeling just by looking at their face                                   |
-| A10_score            | Int (0,1)        | Prompt (yes/no): I find it difficult to work out people's intentions                                                                            |
+| A1_score             | Int (0,1)        | Prompt: I often notice small sounds when others do not                                                                                 |
+| A2_score             | Int (0,1)        | Prompt: I usually concentrate more on the whole picture, rather than the small details                                                 |
+| A3_score             | Int (0,1)        | Prompt: I find it easy to do more than one thing at once                                                                               |
+| A4_score             | Int (0,1)        | Prompt: If there is an interruption, I can switch back to what I was doing very quickly                                                |
+| A5_score             | Int (0,1)        | Prompt: I find it easy to 'read between the lines' when someone is talking to me                                                       |
+| A6_score             | Int (0,1)        | Prompt: I know how to tell if someone listening to me is getting bored                                                                 |
+| A7_score             | Int (0,1)        | Prompt: When I'm reading a story I find it difficult to work out the characters' intentions                                            |
+| A8_score             | Int (0,1)        | Prompt: I like to collect information about categories of things(e.g. types of car, types of bird, types of train, types of plant etc) |
+| A9_score             | Int (0,1)        | Prompt: I find it easy to work out what someone is thinking or feeling just by looking at their face                                   |
+| A10_score            | Int (0,1)        | Prompt: I find it difficult to work out people's intentions                                                                            |
 | Age                  | Int              | Age of the individual                                                                                                                  |
 | Gender               | String           | M (male) or F (female)                                                                                                                 |
 | Ethnicity            | String           | Common Ethnicities defined for each individual                                                                                         |

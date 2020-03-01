@@ -144,7 +144,7 @@ df%>%
 
 ### Research Question
 
-In this analysis, we will seek to determine the relationship between the AQ-10 result (cumulative score) and the age of the individual.
+In this analysis, we will use logistic regression to determine the relationship between the AQ-10 result (cumulative score) and the age of the individual.
 
 ### Plan of Action
 

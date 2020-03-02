@@ -176,7 +176,7 @@ autism_corr <- cor(df[1:10])
 
 # Round the values to 2 decimal places
 autism_corr <- round(autism_corr,2)
-corrplot(autism_corr, 
+corr <- corrplot(autism_corr, 
          type="upper", 
          method="color",
          tl.srt=45, 
@@ -185,6 +185,14 @@ corrplot(autism_corr,
 ```
 
 ![](milestone1-547-example_files/figure-html/corrplot-1.png)<!-- -->
+
+```r
+typeof(corr)
+```
+
+```
+## [1] "double"
+```
 
 #### Dodged Bar Chart
 
@@ -228,7 +236,7 @@ df%>%
 
 ### Research Question
 
-In this analysis, we will seek to determine the relationship between the AQ-10 result (cumulative score) and the age of the individual.
+In this analysis, we will use logistic regression to determine the relationship between the AQ-10 result (cumulative score) and the age of the individual.
 
 ### Plan of Action
 

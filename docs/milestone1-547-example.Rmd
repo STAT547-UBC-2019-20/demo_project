@@ -99,12 +99,14 @@ autism_corr <- cor(df[1:10])
 
 # Round the values to 2 decimal places
 autism_corr <- round(autism_corr,2)
-corrplot(autism_corr, 
+corr <- corrplot(autism_corr, 
          type="upper", 
          method="color",
          tl.srt=45, 
          tl.col = "blue",
          diag = FALSE)
+
+typeof(corr)
 
 ```
 

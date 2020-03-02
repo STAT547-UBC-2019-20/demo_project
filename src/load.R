@@ -1,3 +1,5 @@
+library(tidyverse)
+
 # Read file
 df <- foreign::read.arff("../data/Autism-Adult-Data.arff")
 

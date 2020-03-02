@@ -4,11 +4,11 @@ library(tidyverse)
 
 
 # Read file
-df <- foreign::read.arff("../data/Autism-Adult-Data.arff")
+df <- read_csv("../data/autism.csv")
 
 # Barplot
 df  %>%
-  ggplot(aes(x=ethnicity, fill=austim))+
+  ggplot(aes(x=ethnicity, fill=autism))+
   geom_bar(stat="count", position = "dodge")+
   labs(x = "Ethnicity", y = "Count", title = "Occurence of Autism by Ethnicity") +
   scale_fill_discrete(name="Autism") + # This changes the legend title
@@ -26,7 +26,7 @@ unlink("Rplots.pdf")
 # Proportional bar chart
 df%>% 
   ggplot()+
-  geom_bar(mapping = aes(x=as.factor(result), fill = austim),
+  geom_bar(mapping = aes(x=as.factor(result), fill = autism),
            position = "fill")+
   ylab("Proportion of Participants")+
   xlab("ASD-10 Test Score")+

@@ -3,10 +3,11 @@ library(tidyverse)
 ## Load the csv
 df <- read_csv("../data/autism.csv")
 
-# read_csv read the index as a column so we have to drop the first column, named X1
-## Attribution https://stackoverflow.com/questions/4605206/drop-data-frame-columns-by-name
-drop <- c("X1")
+# If you have columns you need to drop from your dataframe, try the following
+drop <- c("X1", "X2")
 df <- df[ , !(names(df) %in% drop)]
+## Attribution https://stackoverflow.com/questions/4605206/drop-data-frame-columns-by-name
+
 
 # Three of our column names are mispelled (jundice -> jaundice, austim -> autism, and contry_of_res)
 # Look at the column names with: names(df)

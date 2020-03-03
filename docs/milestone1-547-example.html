@@ -379,8 +379,7 @@ summary {
 
 <div id="TOC">
 <ul>
-<li><a href="#autism-screening">Autism Screening</a>
-<ul>
+<li><a href="#autism-screening">Autism Screening</a><ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#data-description">Data Description</a></li>
 <li><a href="#exploring-the-dataset">Exploring the Dataset</a></li>
@@ -659,7 +658,7 @@ df &lt;- foreign::read.arff(&quot;../data/Autism-Adult-Data.arff&quot;)</code></
 <div id="correllogram" class="section level4">
 <h4>Correllogram</h4>
 <p>From the correllogram below, we can see that there’s very little correlation among any of the ten ‘question’ variables in the dataset. The colour scheme shows all positive correlations as blue, and all negative correlations as red.</p>
-<pre class="r"><code># Convert numeric columns to &#39;double&#39; type
+<pre class="r"><code># Convert numeric columns to 'double' type
 df[1:10] &lt;- sapply(df[1:10], as.double)
 autism_corr &lt;- cor(df[1:10])
 
@@ -713,12 +712,12 @@ corr &lt;- corrplot(autism_corr,
 <div id="references" class="section level3">
 <h3>References</h3>
 <p>Thomas Pin and Tejas Phaterpekar, Matthew Connell - Autism Spectrum Disorder Screening Machine Learning Analysis - <a href="https://github.com/UBC-MDS/522-Workflows-Group-414" class="uri">https://github.com/UBC-MDS/522-Workflows-Group-414</a></p>
-<div id="refs" class="references hanging-indent">
+<div id="refs" class="references">
 <div id="ref-allison2012toward">
-<p>Allison, Carrie, Bonnie Auyeung, and Simon Baron-Cohen. 2012. “Toward Brief ‘Red Flags’ for Autism Screening: The Short Autism Spectrum Quotient and the Short Quantitative Checklist in 1,000 Cases and 3,000 Controls.” <em>Journal of the American Academy of Child &amp; Adolescent Psychiatry</em> 51 (2): 202–12.</p>
+<p>Allison, Carrie, Bonnie Auyeung, and Simon Baron-Cohen. 2012. “Toward Brief ‘Red Flags’ for Autism Screening: The Short Autism Spectrum Quotient and the Short Quantitative Checklist in 1,000 Cases and 3,000 Controls.” <em>Journal of the American Academy of Child &amp; Adolescent Psychiatry</em> 51 (2). Elsevier: 202–12.</p>
 </div>
 <div id="ref-Fadi">
-<p>Thabtah, Fadi. 2019. “An Accessible and Efficient Autism Screening Method for Behavioural Data and Predictive Analyses.” <em>Health Informatics Journal</em> 25 (4): 1739–55. <a href="https://doi.org/10.1177/1460458218796636">https://doi.org/10.1177/1460458218796636</a>.</p>
+<p>Thabtah, Fadi. 2019. “An Accessible and Efficient Autism Screening Method for Behavioural Data and Predictive Analyses.” <em>Health Informatics Journal</em> 25 (4): 1739–55. <a href="https://doi.org/10.1177/1460458218796636" class="uri">https://doi.org/10.1177/1460458218796636</a>.</p>
 </div>
 </div>
 </div>

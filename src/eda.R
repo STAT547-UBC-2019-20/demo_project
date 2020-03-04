@@ -16,7 +16,7 @@ df  %>%
   coord_flip() # Flip x- and y-axis
 
 ### Save the barplot
-ggsave(filename = "../img/barplot", device = 'png')
+ggsave(filename = "../images/barplot.png", device = 'png')
 
 #### This may not be necessary;
 #### If you're getting a file called "Rplots.pdf" generated in your folder, 
@@ -35,7 +35,7 @@ df%>%
   theme_bw(20)
 
 ## Save the chart
-ggsave(filename = "../img/propbarplot", device = 'png')
+ggsave(filename = "../images/propbarplot.png", device = 'png')
 
 
 # Correlation Plot
@@ -52,7 +52,7 @@ autism_corr <- round(autism_corr,2)
 ### so we have to use a different method to save (or export) the plot
 
 ## Set up the graphics device
-png(filename="../img/correlation.png")
+png(filename="../images/correlation.png")
 #### Attribution: https://blog.hasanbul.li/2018/01/14/exporting-correlation-plots/
 
 ## Make the correlation plog

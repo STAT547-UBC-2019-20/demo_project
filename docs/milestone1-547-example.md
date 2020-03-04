@@ -156,43 +156,13 @@ Below is the entire variable set:
 ### Exploring the Dataset
 
 
-```r
-# First we read in the dataset.
-# This dataset is in .arff format rather than the more standard .csv
-# so we need to load a separate library ("foreign")
-df <- foreign::read.arff("../data/Autism-Adult-Data.arff")
-```
-
 #### Correllogram
 
 From the correllogram below, we can see that there's very little correlation among any of the ten 'question' variables in the dataset.
 The colour scheme shows all positive correlations as blue, and all negative correlations as red.
 
+![](../images/correlation.png)
 
-```r
-# Convert numeric columns to 'double' type
-df[1:10] <- sapply(df[1:10], as.double)
-autism_corr <- cor(df[1:10])
-
-# Round the values to 2 decimal places
-autism_corr <- round(autism_corr,2)
-corr <- corrplot(autism_corr, 
-         type="upper", 
-         method="color",
-         tl.srt=45, 
-         tl.col = "blue",
-         diag = FALSE)
-```
-
-![](milestone1-547-example_files/figure-html/corrplot-1.png)<!-- -->
-
-```r
-typeof(corr)
-```
-
-```
-## [1] "double"
-```
 
 #### Dodged Bar Chart
 
@@ -200,18 +170,7 @@ The dodged bar chart below shows the occurences of autism in people of different
 This plot also illustrates an issue with the dataset: there are two levels called 'others' and one called NA.
 We should definitely combine the two 'others' columns and also decide what to do about the NAs.
 
-
-```r
-df  %>% 
-    ggplot(aes(x=ethnicity, fill=austim))+
-    geom_bar(stat="count", position = "dodge")+
-    labs(x = "Ethnicity", y = "Count", title = "Occurence of Autism by Ethnicity") + 
-    scale_fill_discrete(name="Autism") + # This changes the legend title
-    theme_bw(18) + # Change the theme and set the font size
-    coord_flip() # Flip x- and y-axis
-```
-
-![](milestone1-547-example_files/figure-html/bar-chart-1.png)<!-- -->
+![](../images/barplot.png)
 
 #### Proportional Bar Chart
 
@@ -219,20 +178,7 @@ The proportional bar chart below shows the percentage of people who were diagnos
 A score of 0 would mean that it's incredibly unlikely the person would be diagnosed with autism.
 In general, the higher the score, the more likely it is that the person has autism.
 
-
-```r
-df%>% 
-    ggplot()+
-    geom_bar(mapping = aes(x=as.factor(result), fill = austim),
-             position = "fill")+
-    ylab("Proportion of Participants")+
-    xlab("ASD-10 Test Score")+
-    ggtitle("Proportion of Participants by \nASD-10 Test Score")+
-    scale_fill_brewer(name = "Diagnosed \nwith Autism", palette = "Paired") +
-    theme_bw(20)
-```
-
-![](milestone1-547-example_files/figure-html/proportion-1.png)<!-- -->
+![](../images/propbarplot.png)
 
 ### Research Question
 

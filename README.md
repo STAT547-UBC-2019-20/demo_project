@@ -18,6 +18,15 @@ Below are the steps to reproduce the analysis in this document:
 
 4. [knit.R](https://github.com/STAT547-UBC-2019-20/demo_project/blob/master/src/knit.R): Knits the .Rmd file into pdf and html files.
 
+To replicate this analysis, clone this repository, navigate to the `src` folder in your terminal, and type in the following commands:
+
+```
+Rscript load.R
+Rscript clean.R
+Rscript eda.R
+Rscript knit.R
+```
+
 ## Acknowledgements
 
 The report was initially created by Matthew Connell and originated as a DSCI 522 team project by Thomas Pin and Tejas Phaterpekar, Matthew Connell - [Autism Spectrum Disorder Screening Machine Learning Analysis](https://github.com/UBC-MDS/522-Workflows-Group-414).

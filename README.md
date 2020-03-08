@@ -10,11 +10,13 @@ This will continue to update throughout the course and important changes will be
 
 Below are the steps to reproduce the analysis in this document:
 
-1. Script 1
+1. [load.R](https://github.com/STAT547-UBC-2019-20/demo_project/blob/master/src/load.R): Loads the data file into a CSV.
 
-2. Script 2
+2. [clean.R](https://github.com/STAT547-UBC-2019-20/demo_project/blob/master/src/clean.R): Cleans the data.
 
-3. Script 3
+3. [eda.R](https://github.com/STAT547-UBC-2019-20/demo_project/blob/master/src/eda.R): Performs exploratory data analysis.
+
+4. [knit.R](https://github.com/STAT547-UBC-2019-20/demo_project/blob/master/src/knit.R): Knits the .Rmd file into pdf and html files.
 
 ## Acknowledgements
 

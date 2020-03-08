@@ -24,51 +24,11 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Milestone1-example},
+            pdftitle={Milestone2-example},
             pdfauthor={Matthew Connell, Firas Moosvi},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -114,7 +74,7 @@
 
 \setlength{\droptitle}{-2em}
 
-  \title{Milestone1-example}
+  \title{Milestone2-example}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
     \author{Matthew Connell, Firas Moosvi}
@@ -313,15 +273,6 @@ Does individual have an autism diagnosis?
 \hypertarget{exploring-the-dataset}{%
 \subsubsection{Exploring the Dataset}\label{exploring-the-dataset}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# First we read in the dataset.}
-\CommentTok{# This dataset is in .arff format rather than the more standard .csv}
-\CommentTok{# so we need to load a separate library ("foreign")}
-\NormalTok{df <-}\StringTok{ }\NormalTok{foreign}\OperatorTok{::}\KeywordTok{read.arff}\NormalTok{(}\StringTok{"../data/Autism-Adult-Data.arff"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \hypertarget{correllogram}{%
 \paragraph{Correllogram}\label{correllogram}}
 
@@ -330,34 +281,7 @@ correlation among any of the ten `question' variables in the dataset.
 The colour scheme shows all positive correlations as blue, and all
 negative correlations as red.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# Convert numeric columns to 'double' type}
-\NormalTok{df[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{] <-}\StringTok{ }\KeywordTok{sapply}\NormalTok{(df[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{], as.double)}
-\NormalTok{autism_corr <-}\StringTok{ }\KeywordTok{cor}\NormalTok{(df[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{])}
-
-\CommentTok{# Round the values to 2 decimal places}
-\NormalTok{autism_corr <-}\StringTok{ }\KeywordTok{round}\NormalTok{(autism_corr,}\DecValTok{2}\NormalTok{)}
-\NormalTok{corr <-}\StringTok{ }\KeywordTok{corrplot}\NormalTok{(autism_corr, }
-         \DataTypeTok{type=}\StringTok{"upper"}\NormalTok{, }
-         \DataTypeTok{method=}\StringTok{"color"}\NormalTok{,}
-         \DataTypeTok{tl.srt=}\DecValTok{45}\NormalTok{, }
-         \DataTypeTok{tl.col =} \StringTok{"blue"}\NormalTok{,}
-         \DataTypeTok{diag =} \OtherTok{FALSE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{milestone1-547-example_files/figure-latex/corrplot-1.pdf}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{typeof}\NormalTok{(corr)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] "double"
-\end{verbatim}
+\includegraphics{../images/correlation.png}
 
 \hypertarget{dodged-bar-chart}{%
 \paragraph{Dodged Bar Chart}\label{dodged-bar-chart}}
@@ -368,19 +292,7 @@ issue with the dataset: there are two levels called `others' and one
 called NA. We should definitely combine the two `others' columns and
 also decide what to do about the NAs.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{df  }\OperatorTok{%>%}\StringTok{ }
-\StringTok{    }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{ethnicity, }\DataTypeTok{fill=}\NormalTok{austim))}\OperatorTok{+}
-\StringTok{    }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat=}\StringTok{"count"}\NormalTok{, }\DataTypeTok{position =} \StringTok{"dodge"}\NormalTok{)}\OperatorTok{+}
-\StringTok{    }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Ethnicity"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Count"}\NormalTok{, }\DataTypeTok{title =} \StringTok{"Occurence of Autism by Ethnicity"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{    }\KeywordTok{scale_fill_discrete}\NormalTok{(}\DataTypeTok{name=}\StringTok{"Autism"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\CommentTok{# This changes the legend title}
-\StringTok{    }\KeywordTok{theme_bw}\NormalTok{(}\DecValTok{18}\NormalTok{) }\OperatorTok{+}\StringTok{ }\CommentTok{# Change the theme and set the font size}
-\StringTok{    }\KeywordTok{coord_flip}\NormalTok{() }\CommentTok{# Flip x- and y-axis}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{milestone1-547-example_files/figure-latex/bar-chart-1.pdf}
+\includegraphics{../images/barplot.png}
 
 \hypertarget{proportional-bar-chart}{%
 \paragraph{Proportional Bar Chart}\label{proportional-bar-chart}}
@@ -391,21 +303,7 @@ test. A score of 0 would mean that it's incredibly unlikely the person
 would be diagnosed with autism. In general, the higher the score, the
 more likely it is that the person has autism.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{df}\OperatorTok{%>%}\StringTok{ }
-\StringTok{    }\KeywordTok{ggplot}\NormalTok{()}\OperatorTok{+}
-\StringTok{    }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{mapping =} \KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\KeywordTok{as.factor}\NormalTok{(result), }\DataTypeTok{fill =}\NormalTok{ austim),}
-             \DataTypeTok{position =} \StringTok{"fill"}\NormalTok{)}\OperatorTok{+}
-\StringTok{    }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Proportion of Participants"}\NormalTok{)}\OperatorTok{+}
-\StringTok{    }\KeywordTok{xlab}\NormalTok{(}\StringTok{"ASD-10 Test Score"}\NormalTok{)}\OperatorTok{+}
-\StringTok{    }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Proportion of Participants by }\CharTok{\textbackslash{}n}\StringTok{ASD-10 Test Score"}\NormalTok{)}\OperatorTok{+}
-\StringTok{    }\KeywordTok{scale_fill_brewer}\NormalTok{(}\DataTypeTok{name =} \StringTok{"Diagnosed }\CharTok{\textbackslash{}n}\StringTok{with Autism"}\NormalTok{, }\DataTypeTok{palette =} \StringTok{"Paired"}\NormalTok{) }\OperatorTok{+}
-\StringTok{    }\KeywordTok{theme_bw}\NormalTok{(}\DecValTok{20}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{milestone1-547-example_files/figure-latex/proportion-1.pdf}
+\includegraphics{../images/propbarplot.png}
 
 \hypertarget{research-question}{%
 \subsubsection{Research Question}\label{research-question}}

@@ -4,8 +4,17 @@ This is a demo project for STAT 547 so you know the level of detail we are expec
 
 The HTML version of the report can be found [here](https://stat547-ubc-2019-20.github.io/demo_project/docs/milestone1-547-example.html)
 
-
 This will continue to update throughout the course and important changes will be marked by a release.
+
+## Usage
+
+Below are the steps to reproduce the analysis in this document:
+
+1. Script 1
+
+2. Script 2
+
+3. Script 3
 
 ## Acknowledgements
 

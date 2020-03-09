@@ -21,10 +21,10 @@ Below are the steps to reproduce the analysis in this document:
 To replicate this analysis, clone this repository, navigate to the `src` folder in your terminal, and type in the following commands:
 
 ```
-Rscript load.R
-Rscript clean.R
-Rscript eda.R
-Rscript knit.R
+Rscript src/load.R --data_filepath="data/autism.csv"
+Rscript src/clean.R --filepath="data/autism.csv"
+Rscript src/eda.R --filepath="data/autism.csv"Rscript eda.R
+Rscript src/knit.R --finalreport="docs/milestone2-547-example.Rmd"
 ```
 
 ## Acknowledgements

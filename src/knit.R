@@ -1,1 +1,14 @@
-rmarkdown::render("../docs/milestone1-547-example.Rmd", c("html_document", "pdf_document"))
+"This script knits the final report together.
+
+Usage: src/knit.R --finalreport=<finalreport>" -> doc
+
+library(docopt)
+
+opt <- docopt(doc)
+
+main <- function(finalreport) {
+    rmarkdown::render(finalreport, 
+        c("html_document", "pdf_document"))
+}
+
+main(opt$finalreport)

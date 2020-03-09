@@ -1,15 +1,15 @@
 "This script loads in the autism.csv file, cleans it, and then re-exports the file with the same name
 
-Usage: src/clean.R --data_filepath=<data_filepath>" -> doc
+Usage: src/clean.R --filepath=<filepath>" -> doc
 
 library(tidyverse)
 library(docopt)
 
 opt <- docopt(doc)
 
-main <- function(data_filepath){
+main <- function(filepath){
     ## Load the csv
-    df <- read_csv(data_filepath)
+    df <- read_csv(filepath)
 
     # If you have columns you need to drop from your dataframe, try the following
     drop <- c("X1", "X2")
@@ -23,7 +23,7 @@ main <- function(data_filepath){
     names(df)[16] <- "country_of_res"
 
     # Save our cleaned dataframe
-    write_csv(df, path = data_filepath)
+    write_csv(df, path = filepath)
 }
 
-main(opt$data_filepath)
+main(opt$filepath)

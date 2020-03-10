@@ -27,7 +27,7 @@ Rscript src/clean.R --filepath_raw="data/autism.csv" --filepath_cleaned="data/au
 
 Rscript src/eda.R --filepath_cleaned="data/autism_cleaned.csv"
 
-Rscript src/knit.R --finalreport="docs/milestone2-547-example.Rmd"
+Rscript src/knit.R --finalreport="docs/finalreport.Rmd"
 ```
 
 ## Acknowledgements

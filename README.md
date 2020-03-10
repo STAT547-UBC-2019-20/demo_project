@@ -21,7 +21,7 @@ Below are the steps to reproduce the analysis in this document:
 To replicate this analysis, clone this repository, navigate to the `src` folder in your terminal, and type in the following commands:
 
 ```
-Rscript src/load.R --data_filepath="data/autism.csv" --url_to_read="https://github.com/STAT547-UBC-2019-20/data_sets/raw/master/Autism-Adult-Data.arff"
+Rscript src/load.R --filepath="data/autism.csv" --url_to_read="https://github.com/STAT547-UBC-2019-20/data_sets/raw/master/Autism-Adult-Data.arff"
 
 Rscript src/clean.R --filepath="data/autism.csv"
 

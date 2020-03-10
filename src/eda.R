@@ -1,6 +1,6 @@
 "This script does some EDA and outputs some plots.
 
-Usage: src/eda.R --filepath=<filepath>" -> doc
+Usage: src/eda.R --filepath_cleaned=<filepath_cleaned>" -> doc
 
 library(docopt)
 library(corrplot)
@@ -8,9 +8,9 @@ library(tidyverse)
 
 opt <- docopt(doc)
 
-main <- function(filepath){
+main <- function(filepath_cleaned){
   # Read file
-  df <- read_csv(filepath)
+  df <- read_csv(filepath_cleaned)
 
   # Barplot
   df  %>%
@@ -72,4 +72,4 @@ main <- function(filepath){
   dev.off()
 }
 
-main(opt$filepath)
+main(opt$filepath_cleaned)

@@ -23,9 +23,9 @@ To replicate this analysis, clone this repository, navigate to the `src` folder 
 ```
 Rscript src/load.R --filepath="data/autism.csv" --url_to_read="https://github.com/STAT547-UBC-2019-20/data_sets/raw/master/Autism-Adult-Data.arff"
 
-Rscript src/clean.R --filepath="data/autism.csv"
+Rscript src/clean.R --filepath="data/autism_cleaned.csv"
 
-Rscript src/eda.R --filepath="data/autism.csv"
+Rscript src/eda.R --filepath="data/autism_cleaned.csv"
 
 Rscript src/knit.R --finalreport="docs/milestone2-547-example.Rmd"
 ```

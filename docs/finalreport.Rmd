@@ -4,7 +4,7 @@ author: "Matthew Connell, Firas Moosvi"
 date: "05/03/2020"
 always_allow_html: true
 output: 
-  html_document:
+  bookdown::html_document2:
     keep_md: yes
     toc: true
 bibliography: ../docs/asd_refs.bib
@@ -93,7 +93,7 @@ The dodged bar chart below shows the occurences of autism in people of different
 This plot also illustrates an issue with the dataset: there are two levels called 'others' and one called NA.
 We should definitely combine the two 'others' columns and also decide what to do about the NAs.
 
-```{r, out.width= "125%"}
+```{r fig2, fig.cap="Occurence of Autism by Ethnicity",out.width= "125%"}
 df <- read_csv("../data/autism_cleaned.csv")
 df %>%
     ggplot(aes(x=ethnicity, fill=autism))+
@@ -103,6 +103,7 @@ df %>%
     theme_bw(18) + # Change the theme and set the font size
     coord_flip() # Flip x- and y-axis
 ```
+Here is an example of cross-referenceing Figure\@ref(fig:fig2)
 ```{r }
 sample_df <- df %>% head
 sample_df

@@ -93,7 +93,20 @@ The dodged bar chart below shows the occurences of autism in people of different
 This plot also illustrates an issue with the dataset: there are two levels called 'others' and one called NA.
 We should definitely combine the two 'others' columns and also decide what to do about the NAs.
 
-![](../images/barplot.png)
+```{r, out.width= "125%"}
+df <- read_csv("../data/autism_cleaned.csv")
+df %>%
+    ggplot(aes(x=ethnicity, fill=autism))+
+    geom_bar(stat="count", position = "dodge")+
+    labs(x = "Ethnicity", y = "Count", title = "Occurence of Autism by Ethnicity") +
+    scale_fill_discrete(name="Autism") + # This changes the legend title
+    theme_bw(18) + # Change the theme and set the font size
+    coord_flip() # Flip x- and y-axis
+```
+```{r }
+sample_df <- df %>% head
+sample_df
+```
 
 #### Proportional Bar Chart
 
